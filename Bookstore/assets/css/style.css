@@ -1,0 +1,1370 @@
+/* ========== RESET DASAR ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+/* ========== NAVBAR ========== */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:white;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.nav-links{
+    display:flex;
+    gap:50px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:#2f80ed;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+}
+
+.search-box input{
+    width:250px;
+    padding:8px 12px;
+    border:1px solid #ccc;
+    border-radius:20px 0 0 20px;
+    outline:none;
+}
+
+.search-box button{
+    padding:8px 14px;
+    border:none;
+    background:#2f80ed;
+    color:white;
+    border-radius:0 20px 20px 0;
+    cursor:pointer;
+}
+
+.nav-icons{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.nav-icons a{
+    text-decoration:none;
+    color:#222;
+    font-size: 15px;
+}
+
+.icon-cart {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.icon-user {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* ========== SECTION BUKU ========== */
+
+.book-section {
+    padding: 30px 40px;
+}
+
+.book-section h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.book-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.book-card {
+    background: white;
+    width: 160px;
+    flex-shrink: 0;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    transition: transform .15s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    background-color: #ddd;
+}
+
+.book-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-price {
+    font-size: 13px;
+    color: #333;
+}
+
+.book-wrapper {
+    background-color: #e8e8e8;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* ========== HALAMAN BOOKS (KATEGORI) ========== */
+
+.category-section {
+    padding: 30px 40px;
+}
+
+.category-columns {
+    display: flex;
+    gap: 60px;
+}
+
+.category-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.genre-list {
+    list-style: none;
+}
+
+.genre-list li {
+    margin-bottom: 8px;
+}
+
+.genre-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.genre-list a:hover {
+    color: #2f80ed;
+    text-decoration: underline;
+}
+
+/* ========== FORM LOGIN & REGISTER ========== */
+
+.auth-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.auth-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    width: 100%;
+    max-width: 380px;
+}
+
+.auth-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box label {
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+.auth-box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+.auth-box input:focus {
+    border-color: #2f80ed;
+}
+
+.auth-box form button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.auth-box form button:hover {
+    background: #1a68d1;
+}
+
+.auth-switch {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth-error {
+    background: #fde2e2;
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.auth-success {
+    background: #e2fde6;
+    color: #27ae60;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* ========== TAB LOGIN/REGISTER ========== */
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    cursor: pointer;
+    color: #888;
+}
+
+.tab-btn.active {
+    color: #2f80ed;
+    border-bottom: 2px solid #2f80ed;
+    font-weight: bold;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.btn-google {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-google:hover {
+    background: #f5f5f5;
+}
+
+.icon-google {
+    width: 18px;
+    height: 18px;
+}
+
+/* ========== NAVBAR SAAT SUDAH LOGIN ========== */
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #222;
+}
+
+.logout-link {
+    text-decoration: none;
+    color: #c0392b;
+    font-size: 13px;
+    border: 1px solid #c0392b;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.logout-link:hover {
+    background: #c0392b;
+    color: white;
+}
+
+/* ========== HALAMAN ADMIN ========== */
+
+.admin-section {
+    padding: 30px 40px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-add {
+    background: #2f80ed;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-add:hover {
+    background: #1a68d1;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+    background: #f5f5f5;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit, .btn-delete {
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-edit {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.btn-delete {
+    background: #fde2e2;
+    color: #c0392b;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.admin-form label {
+    font-size: 13px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.checkbox-label {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px !important;
+}
+
+.checkbox-label input {
+    width: auto;
+}
+
+.admin-form button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.admin-form button:hover {
+    background: #1a68d1;
+}
+
+/* ========== PREVIEW COVER DI HALAMAN EDIT ADMIN ========== */
+.current-cover {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ========== KARTU STATISTIK ADMIN ========== */
+
+.stat-cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    min-width: 140px;
+    flex: 1;
+    text-align: center;
+}
+
+.stat-card.highlight {
+    background: #eaf3ff;
+    border: 1px solid #2f80ed;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2f80ed;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* ========== GAMBAR COVER DI TABEL ADMIN ========== */
+.table-cover {
+    width: 40px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+/* ========== HALAMAN TRANSAKSI (LIST & DETAIL) ========== */
+
+.transaksi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.transaksi-card {
+    position: relative;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    transition: transform .15s;
+}
+
+.transaksi-card:hover {
+    transform: translateY(-4px);
+}
+
+.transaksi-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.transaksi-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.transaksi-price {
+    font-size: 13px;
+    color: #333;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #2f80ed;
+    font-size: 14px;
+}
+
+.transaksi-detail-box {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.transaksi-detail-left {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.transaksi-detail-left img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.transaksi-penulis {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.transaksi-stok {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.transaksi-deskripsi {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.transaksi-detail-right {
+    flex: 1;
+    border-left: 1px solid #eee;
+    padding-left: 25px;
+}
+
+.transaksi-empty {
+    font-size: 14px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.pemesan-list {
+    list-style: none;
+}
+
+.pemesan-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.badge-notif {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e74c3c;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+
+/* ========== HALAMAN DETAIL BUKU (USER) ========== */
+
+.detail-section {
+    padding: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.detail-box {
+    display: flex;
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.detail-left {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.detail-left img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.detail-right {
+    flex: 1;
+}
+
+.detail-right h1 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.detail-penulis {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.detail-genre {
+    display: inline-block;
+    background: #eaf3ff;
+    color: #2f80ed;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.detail-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.detail-deskripsi {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.detail-actions form {
+    margin: 0;
+}
+
+.btn-wishlist, .btn-cart {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-wishlist {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.btn-cart {
+    background: #2f80ed;
+    color: white;
+}
+
+/* ========== SECTION KOMENTAR ========== */
+
+.comment-section {
+    margin-top: 25px;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.comment-section h3 {
+    margin-bottom: 15px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    padding: 8px 16px;
+    background: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.comment-empty {
+    font-size: 14px;
+    color: #999;
+}
+
+.comment-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.comment-text {
+    font-size: 14px;
+    color: #444;
+}
+
+/* ========== HALAMAN CART ========== */
+
+.cart-section {
+    padding: 30px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cart-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cart-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.cart-img {
+    width: 60px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.cart-title {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.cart-price {
+    font-size: 13px;
+    color: #666;
+}
+
+.cart-qty-form {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-qty-input {
+    width: 50px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn-update-qty {
+    font-size: 12px;
+    padding: 6px 10px;
+    border: none;
+    background: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-subtotal {
+    font-weight: bold;
+    font-size: 14px;
+    width: 100px;
+    text-align: right;
+}
+
+.cart-total-box {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.cart-total-text {
+    font-size: 16px;
+}
+
+.btn-checkout {
+    background: #2f80ed;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-checkout:hover {
+    background: #1a68d1;
+}
+
+/* ========== HALAMAN KELOLA KATEGORI ========== */
+
+.kategori-form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.kategori-inline-form {
+    flex-direction: row !important;
+    gap: 10px;
+    align-items: center;
+}
+
+.kategori-inline-form input,
+.kategori-inline-form select {
+    flex: 1;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.kategori-inline-form button {
+    margin-top: 0 !important;
+    padding: 9px 16px;
+    background: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.kategori-group {
+    background: white;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+.kategori-group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.kategori-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.kategori-sub-list {
+    list-style: none;
+}
+
+.kategori-sub-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.kategori-empty {
+    color: #999;
+    font-size: 13px;
+}
+
+/* ========== HALAMAN CHECKOUT ========== */
+
+.checkout-section {
+    padding: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.checkout-layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.checkout-summary, .checkout-payment {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+    flex: 1;
+}
+
+.checkout-item-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-total-row {
+    border-bottom: none;
+    border-top: 2px solid #333;
+    margin-top: 8px;
+    padding-top: 12px;
+    font-size: 16px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.payment-option:hover {
+    border-color: #2f80ed;
+    background: #f7fbff;
+}
+
+.payment-option input {
+    width: auto;
+}
+
+/* ========== HALAMAN INVOICE/STRUK (versi tabel lama, beberapa masih dipakai) ========== */
+
+.invoice-section {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invoice-meta {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.invoice-actions {
+    margin-top: 20px;
+}
+
+/* ========== STATUS PESANAN ========== */
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-selesai {
+    background: #d4edda;
+    color: #27ae60;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ========== STRUK GAYA THERMAL PRINTER (USER) ========== */
+
+.receipt {
+    background: white;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    border-radius: 4px;
+}
+
+.receipt-header {
+    text-align: center;
+}
+
+.receipt-store {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.receipt-address {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.receipt-dashed {
+    border-top: 1px dashed #999;
+    margin: 12px 0;
+}
+
+.receipt-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.receipt-item-name {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.receipt-item-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.receipt-total {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.receipt-status {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.receipt-footer {
+    text-align: center;
+    font-size: 11px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* ========== LABEL PENGIRIMAN (ADMIN) ========== */
+
+.shipping-label {
+    margin-bottom: 20px;
+}
+
+.shipping-label-title {
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.shipping-label-box {
+    background: #fafafa;
+    border: 1px dashed #999;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ========== RINGKASAN SEBELUM DIPROSES (belum jadi struk resmi) ========== */
+
+.summary-box {
+    background: white;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.summary-pending-badge {
+    display: inline-block;
+    background: #fff3cd;
+    color: #856404;
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.summary-items {
+    margin-top: 10px;
+}
+
+/* ========== TOMBOL CETAK STRUK ========== */
+.btn-print {
+    background: #2f80ed;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn-print:hover {
+    background: #1a68d1;
+}
+
+/* ========== MODE CETAK/PRINT ========== */
+@media print {
+    .navbar,
+    footer,
+    .print-hide {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .receipt, .summary-box {
+        box-shadow: none;
+        margin: 0;
+    }
+}
+
+/* ========== FOOTER LENGKAP ========== */
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 40px 20px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-desc {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.85;
+}
+
+.footer-socials a:hover {
+    opacity: 1;
+}
+
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.85;
+}
+
+.footer-socials a:hover img {
+    opacity: 1;
+}
+
+.footer-contact {
+    flex: 1;
+    min-width: 220px;
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.9;
+}
+
+.footer-bottom {
+    max-width: 1000px;
+    margin: 25px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-links {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #888;
+}
+
+/* ========== HALAMAN STATIS (PRIVACY, TERMS, COOKIE) ========== */
+
+.static-page-section {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.static-page-section h1 {
+    margin-bottom: 4px;
+}
+
+.static-updated {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 25px;
+}
+
+.static-page-section h3 {
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+.static-page-section p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
